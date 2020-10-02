@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutterstatemanagement/get_x/get_x.dart';
+import 'package:flutterstatemanagement/riverpod/riverpod.dart';
 import 'package:get/get.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatefulWidget {
@@ -38,6 +40,15 @@ class Home extends StatelessWidget {
                 },
                 child: Text(
                   "Get X",
+                ),
+              ),
+              RaisedButton(
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => RiverPod()));
+                },
+                child: Text(
+                  "RiverPod",
                 ),
               )
             ],

@@ -24,6 +24,8 @@ dependencies:
   flutter:
     sdk: flutter
   get:
+  flutter_hooks:
+  hooks_riverpod:
 
 
   # The following adds the Cupertino Icons font to your application.
